@@ -8,11 +8,13 @@
 
 #include "gpio.h"
 
-#define V1_BCM2708_PERI_BASE        0x20000000
+//Pi3
+#define V1_BCM2708_PERI_BASE        0x3F000000
 #define V1_GPIO_BASE                (V1_BCM2708_PERI_BASE + 0x200000) /* GPIO controller */
 
-#define V2_BCM2708_PERI_BASE        0x3F000000
-#define V2_GPIO_BASE                (V2_BCM2708_PERI_BASE + 0x200000) /* GPIO controller */
+//Pi4
+#define V2_BCM2711_PERI_BASE        0xFE000000
+#define V2_GPIO_BASE                (V2_BCM2711_PERI_BASE + 0x200000) /* GPIO controller */
 
 #define GPIO_PIN_L0_FSEL0_OFFSET	(0)		/* GPFSEL0 */
 #define GPIO_PIN_L0_FSEL1_OFFSET	((0x04/4))	/* GPFSEL1 */
